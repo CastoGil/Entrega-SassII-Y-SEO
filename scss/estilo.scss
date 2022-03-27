@@ -1,0 +1,234 @@
+@import "variables";
+@import "maps";
+@import "extend";
+@import "mixin";
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+/*Pagina Principal index.html*/
+.fondo{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../imagen/alien-7015541_19202.jpg);
+    .titulo{
+        color: $color;
+        padding: 10rem 10rem 10rem 9rem;
+        font-size: 4rem;
+        font-family: $title-font
+    }
+    
+}
+/*Navegador Principal*/
+
+.nombre{
+    color: $color2;
+    text-align: center;
+    justify-content: center;
+    font-family: $title-font
+}
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+    color: $color;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: $color;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: $color;
+}
+.navbar-light .navbar-nav {
+    .nav-link{
+       &:hover {
+            color: $color;
+            background-color: $color2;
+            border-color: $color2;
+        }
+    }
+}
+.bg-color {
+    background-color: rgb(0, 0, 0)!important;
+}
+.dropdown-menu {
+    font-size: 1rem;
+    color: $color;
+    text-align: left;
+    list-style: none;
+    background-color: rgb(0, 0, 0);
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 0.25rem;
+}
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1rem;
+    clear: both;
+    font-weight: 400;
+    color: $color;
+    text-align: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+.btn-primary{
+    font-family: $title-font;
+    background-color: green;
+    border-radius: 30px;
+    border-color: $color;
+   
+}
+.btn-primary{
+    &:hover {
+        transform: translate(5px, 9px);
+        transition: all 0.8s;
+        color: $color;
+        background-color: $color2;
+        border-color: $color2;
+        font-family: $title-font;
+    } 
+}
+.navbar-toggler {
+    background-color: $color2;
+}
+/*Diseño del footer*/
+
+footer{
+    max-width: 100%;
+    background-color: #000000;
+    margin: 10px 0 0px 0px;
+    text-align: center;
+    padding: 6px;
+    color:$color;
+    font-family:Arial, Helvetica, sans-serif;
+    .redes ul li{
+        display: inline;
+        font-size: 2rem;
+        list-style: none;
+        color: $color;
+        a{
+            color: $color;
+            &:hover{
+                color: $color2;
+            }
+        }
+    }
+}
+
+/*PAGINA PRINCIPAL BITCOIN.HTML*/
+.fondo2{
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../imagen/F1000140872.jpg);
+    .titulo2{
+        color: $titu;
+        text-align: center;
+
+    }
+    .subtitulo{
+        color: $subtitu;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .historia{
+        color: $color;
+        text-align: left;
+        padding: 10px;
+    }
+    p{
+        @include text
+    }
+    .img{
+        @extend .imagenes;
+        .btc{
+            max-width: 100%;
+            padding: 10px;
+            border-radius: 100px;
+            &:hover {
+                color: $color;
+                background-color: black;
+                border-color: rgb(0, 0, 0);
+                transform: translate(2px, 4px);
+                transition: all 0.8s;
+            }
+        }
+    }
+}
+
+
+/*Pagina Principal Contacto.html*/
+.fondo4{
+    color: $color;
+    background-repeat: no-repeat;
+    background-image: url(../imagen/fantasy-4523944_19202.jpg);
+}
+.btn-green {
+    color: $color;
+    background-color: rgb(0, 0, 0);
+    border-color: #000000;
+    &:hover {
+        color: $color;
+        background-color: $color2;
+        border-color: $color2;
+    }
+
+}
+.btn-primary{
+    font-family: $title-font;
+    background-color: green;
+    border-radius: 30px;
+    &:hover {
+        transform: translate(5px, 9px);
+        transition: all 0.8s;
+        color: $color;
+        background-color: $color2;
+        border-color: $color2;
+        font-family: $title-font;
+    }
+   
+}
+/*PAGINA PRINCIPAL Ethereum.HTML*/
+.fondo3{
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../imagen/pexels-jievani-81856272.jpg);
+    .titulo3{
+        color: $titu;
+        text-align: center;
+    }
+    .subtitulo1{
+        color: $subtitu;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .historia2{
+        color: $color;
+        text-align: left;
+        padding: 10px;
+    }
+    p{
+        @include text
+    }
+    .img{
+            @extend .imagenes;
+            .eth{
+                max-width: 100%;
+                padding: 10px;
+                 border-radius: 100px;
+                &:hover {
+                color: $color;
+                background-color: $color;
+                border-color: rgb(0, 0, 0);
+                transform: translate(2px, 4px);
+                transition: all 0.8s;
+            }
+        }
+     }
+        
+    
+}
